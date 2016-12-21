@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tpo-Zp-YLc">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPz-cT-USX">
+                                <rect key="frame" x="0.0" y="111" width="320" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83213611577181212" green="1" blue="0.89508179530201337" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="recognize code"/>
+                                <connections>
+                                    <action selector="recognizeCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4oi-rD-ufc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5K-wY-PXv">
+                                <rect key="frame" x="0.0" y="64" width="320" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83213611580000002" green="1" blue="0.89508179529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Scan Code"/>
+                                <connections>
+                                    <action selector="scanCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="16H-FF-pAk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ah-11-gHK">
+                                <rect key="frame" x="0.0" y="154" width="320" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83213611580000002" green="1" blue="0.89508179529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="product code"/>
+                                <connections>
+                                    <action selector="productCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CgQ-Rd-4Cl"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nbL-eP-XBu">
+                                <rect key="frame" x="60" y="270" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="8pj-55-ixq"/>
+                                    <constraint firstAttribute="height" constant="200" id="lkH-Mb-aOW"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBx-Kh-zL5">
+                                <rect key="frame" x="0.0" y="198" width="320" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83213611580000002" green="1" blue="0.89508179529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="product code with headImg"/>
+                                <connections>
+                                    <action selector="productCodeWithHeadImg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n6j-Bg-aut"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nbL-eP-XBu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bOq-Hm-baR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nbL-eP-XBu" secondAttribute="bottom" constant="10" id="jzE-ub-tRg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bBf-uz-I3V"/>
+                    <connections>
+                        <outlet property="imageView" destination="nbL-eP-XBu" id="TNy-Xh-qCa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1290" y="83.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5yp-1o-OGI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tpo-Zp-YLc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M7j-pz-xlj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="J4Z-TU-Tzj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bFO-0w-M9S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292.5" y="83.75"/>
+        </scene>
+    </scenes>
+</document>
